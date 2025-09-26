@@ -1,0 +1,70 @@
+body {
+  background-color: #121212; /* Темный фон для примера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+#steam-profile-card {
+  background-color: #1b2838;
+  color: #c7d5e0;
+  border: 1px solid #4b6b88;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Расстояние между аватаром и текстом */
+  transition: transform 0.2s ease-in-out;
+}
+
+#steam-profile-card:hover {
+    transform: translateY(-5px);
+}
+
+#steam-profile-card .avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%; /* Круглый аватар */
+  border: 2px solid #66c0f4;
+  flex-shrink: 0; /* Чтобы аватар не сжимался */
+}
+
+#steam-profile-card .profile-info {
+    flex-grow: 1;
+}
+
+#steam-profile-card .profile-info h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 1.4em;
+  word-break: break-all; /* Перенос длинных никнеймов */
+}
+
+#steam-profile-card .profile-info p {
+  margin: 4px 0 0;
+  font-size: 0.95em;
+}
+
+#steam-profile-card .profile-info a {
+  color: #66c0f4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#steam-profile-card .profile-info a:hover {
+  text-decoration: underline;
+}
+
+/* Стили для статусов */
+.status-online { color: #a4d007; } /* Ярко-зеленый, как в Steam */
+.status-offline { color: #8a8a8a; }
+.status-busy { color: #e53935; } /* Красный */
+.status-away { color: #fdd835; } /* Желтый */
+.status-ingame { color: #66c0f4; } /* Голубой */
